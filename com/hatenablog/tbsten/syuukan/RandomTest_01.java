@@ -3,6 +3,7 @@ package com.hatenablog.tbsten.syuukan;
 import com.hatenablog.tbsten.Games;
 
 /*
+ * No 2
  * lv 1(/5)。
  * 0から100未満の乱数を10000回発生させてその平均を表示するプログラム。
  * */

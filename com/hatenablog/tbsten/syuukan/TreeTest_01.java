@@ -2,6 +2,7 @@ package com.hatenablog.tbsten.syuukan;
 
 
 /*
+ * No 3
  * lv 2(/5)
  * 節の数がsizeの二分木を前順（先行順・前置順・行きがけ順とも）で10,20,...と数字をつけていくプログラム。
  * treeValueはつけられた数字を表す。よって、全順で1番目のtreeValueには10が入る。
