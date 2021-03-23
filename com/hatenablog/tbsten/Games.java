@@ -1,7 +1,9 @@
 package com.hatenablog.tbsten;
 
 import java.util.Scanner;
-
+/*
+ƒQ[ƒ€‚Ì•Ö—˜ŠÖ”‚ğ’è‹`
+*/
 public class Games {
 	public static void sleep(long millisec) {
 		try {
