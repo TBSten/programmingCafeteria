@@ -14,6 +14,9 @@ git status
 echo œgit remote ‚ğŒÄ‚Ño‚µ‚Ü‚·
 git remote add origin https://github.com/TBSten/programmingCafeteria.git
 
+echo œgit push ‚ğŒÄ‚Ño‚µ‚Ü‚·
+git push origin master
+
 pause
 
 
