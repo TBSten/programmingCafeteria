@@ -2,7 +2,7 @@ package com.hatenablog.tbsten;
 
 import java.util.Scanner;
 /*
-ƒQ[ƒ€‚Ì•Ö—˜ŠÖ”‚ğ’è‹`
+ä¾¿åˆ©ãªé–¢æ•°ã‚’ã¦ã„ãã™ã‚‹ã€‚
 */
 public class Games {
 	public static void sleep(long millisec) {
