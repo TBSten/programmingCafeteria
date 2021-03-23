@@ -2,7 +2,7 @@ package com.hatenablog.tbsten;
 
 import java.util.Scanner;
 /*
-便利な関数をていぎする。
+便利な関数をていぎする。テスト用テキスト
 */
 public class Games {
 	public static void sleep(long millisec) {
