@@ -3,6 +3,7 @@ package com.hatenablog.tbsten.syuukan;
 import com.hatenablog.tbsten.Games;
 
 /*
+ * No 1
  * lv 2(/5)。
  * コンピュータとじゃんけんをするプログラム。
  * */
