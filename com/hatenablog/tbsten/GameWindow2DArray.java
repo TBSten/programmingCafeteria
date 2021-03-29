@@ -39,8 +39,8 @@ public class GameWindow2DArray extends JFrame implements LayoutManager2{
 	public int mouseX = -1 ;
 	public int mouseY = -1 ;
 	public String key = "";
-	private JPanel cp ;
-	private JLabel[][] label = null ;
+	protected JPanel cp ;
+	protected JLabel[][] label = null ;
 	private Map<Object,String> outputStr = new HashMap<>();
 	private ObjectToString outputOts = null ;
 
@@ -71,7 +71,8 @@ public class GameWindow2DArray extends JFrame implements LayoutManager2{
 			    repaint();
 			  }
 		} ;
-		new Timer(200,tp).start();
+		System.out.println(getFps());
+		new Timer(getFps(),tp).start();
 
 		setVisible(true);
 	}
@@ -90,6 +91,10 @@ public class GameWindow2DArray extends JFrame implements LayoutManager2{
 
 	public void close() {
 		dispatchEvent(new WindowEvent(this,WindowEvent.WINDOW_CLOSING));
+	}
+
+	public int getFps() {
+		return 200 ;
 	}
 
 
