@@ -9,6 +9,12 @@ import java.awt.Container;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JSlider;
+/**
+ * 2021/4/8現在では非推奨のゲームウィンドウ。
+ *
+ * @author TBSten
+ *
+ */
 
 public class GameWindowPixel extends GameWindow2DArray {
 
@@ -18,6 +24,7 @@ public class GameWindowPixel extends GameWindow2DArray {
 		GameWindowPixel gw = new GameWindowPixel(map) ;
 
 	}
+
 
 
 	int size = 2 ;

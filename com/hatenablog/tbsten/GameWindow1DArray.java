@@ -2,6 +2,12 @@ package com.hatenablog.tbsten;
 
 import java.awt.Container;
 import java.lang.reflect.Array;
+/**
+ * キャラクター一覧,x座標,y座標を表す3つの1次元配列を指定して画面に(gameWidth,gameHeight)で表示するゲームウィンドウ。
+ *
+ * @author TBSten
+ *
+ */
 
 public class GameWindow1DArray extends GameWindow2DArray {
 	Object arr ;

@@ -15,6 +15,7 @@ public class Dijkstra {
     		{0,1,3},
     		{0,2}
     } ;
+
     int[] conCnt = {3,2,3,2} ;
     int[][] cost = {
     		{50,40,10},
