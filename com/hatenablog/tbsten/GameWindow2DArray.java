@@ -39,6 +39,7 @@ public class GameWindow2DArray extends JFrame implements LayoutManager2{
 	public int mouseX = -1 ;
 	public int mouseY = -1 ;
 	public String key = "";
+	public LabelSetter labelSetter = null ;
 	protected JPanel cp ;
 	protected JLabel[][] label = null ;
 	private Map<Object,String> outputStr = new HashMap<>();
@@ -71,7 +72,7 @@ public class GameWindow2DArray extends JFrame implements LayoutManager2{
 			    repaint();
 			  }
 		} ;
-		System.out.println(getFps());
+	//	System.out.println(getFps());
 		new Timer(getFps(),tp).start();
 
 		setVisible(true);
@@ -83,6 +84,9 @@ public class GameWindow2DArray extends JFrame implements LayoutManager2{
 	}
 	public void setPrint(ObjectToString ots) {
 		outputOts = ots ;
+	}
+	public void setLabelOption(LabelSetter setter) {
+		this.labelSetter = setter ;
 	}
 
 	public void message(String msg) {
@@ -178,13 +182,17 @@ public class GameWindow2DArray extends JFrame implements LayoutManager2{
 					}
 					@Override public void mousePressed(MouseEvent e) {
 						JLabel sou = ((JLabel)e.getSource()) ;
+						/*
 						sou.setBackground(Color.WHITE);
 						sou.setForeground(Color.BLACK);
+						*/
 					}
 					@Override public void mouseReleased(MouseEvent e) {
 						JLabel sou = ((JLabel)e.getSource()) ;
+						/*
 						sou.setBackground(Color.BLACK);
 						sou.setForeground(Color.WHITE);
+						*/
 					}
 					@Override public void mouseClicked(MouseEvent e) {
 						mouseX = this.mx;
@@ -233,6 +241,9 @@ public class GameWindow2DArray extends JFrame implements LayoutManager2{
 								label[y][x].setText(outputOts.o2s(map[y][x]));
 							}else {
 								label[y][x].setText(map[y][x].toString());
+							}
+							if(this.labelSetter != null && label[y][x] != null) {
+								this.labelSetter.label(x, y, label[y][x]);
 							}
 						}else {
 						//	System.out.println("("+x+","+y+")にnullがはいってた");

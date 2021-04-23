@@ -12,11 +12,11 @@ public class Mankara {
 
 	MankaraWindow window ;
 	int[] board ;
+	int turn = 0 ;
+	int flg = -1 ;
 	Mankara(){
 		init() ;
 
-		int turn = 0 ;
-		int flg = -1 ;
 		while(flg == -1) {
 			int nyu ;
 			if(turn%2 == 0) {
@@ -38,14 +38,11 @@ public class Mankara {
 					cnt ++;
 				}
 			}
-			if(cnt == 0/*ゲーム終了なら*/) {
+			if(cnt == 0) {
 				flg = turn%2 ;
-			}else {
-				System.out.println("startIdx:"+startIdx);
-				System.out.println("のこりマス:"+cnt);
 			}
-			Games.sleep(1000);
 			turn ++ ;
+			Games.sleep(1000);
 		}
 		if(flg == 0) {
 			window.message("勝利");
@@ -55,6 +52,27 @@ public class Mankara {
 		window.close();
 
 	}
+	public void move(int idx) {
+
+		//idxから動かす
+		int n = board[idx];
+		board[idx] = 0 ;
+
+		//500ミリ秒待機
+		Games.sleep(500);
+
+		for(int i = 1;i <= n;i++) {
+			board[(idx+i)%14]++;
+
+			//300ミリ秒待機
+			Games.sleep(300);
+
+		}
+	}
+
+
+
+
 
 
 	public void init() {
@@ -92,23 +110,6 @@ public class Mankara {
 
 		window.setColor(ans, Color.RED, 1000);
 		return ans ;
-	}
-	public void move(int idx) {
-
-		//idxから動かす
-		int n = board[idx];
-		board[idx] = 0 ;
-
-		//500ミリ秒待機
-		Games.sleep(500);
-
-		for(int i = 1;i <= n;i++) {
-			board[(idx+i)%14]++;
-
-			//300ミリ秒待機
-			Games.sleep(300);
-
-		}
 	}
 
 }
